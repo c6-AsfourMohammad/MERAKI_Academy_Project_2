@@ -18,13 +18,21 @@ rate:"⭐⭐⭐⭐"},
 ,titleMovie:"Joker"
 ,type:"drama",
 description:"Little by little, pressure and circumstances combine to make a failed comedian go crazy and turn into a criminal and a maniacal killer.",
+rate:"⭐⭐⭐⭐"},
+{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212bWptRW1MY21qbWJFY212bUVtZndhY05ibA.jpg"
+,titleMovie:"Minions: The Rise of Gru "
+,type:"animation",
+description:"In the 1970s, a twelve-year-old puppy sets out to carry out his plan in which he hopes to become the most evil person on earth, and on his way encounters strange creatures.",
 rate:"⭐⭐⭐⭐"},]
 //select to div(main)
 const main=$("#main");
 //creat div (bar) in top app 
-const bar=$("<div>Movies</div>");
+const bar=$("<div></div>");
 main.append(bar)
 bar.addClass("bar");
+const nameBar=$("<div>Shahid</div>");
+bar.append(nameBar)
+bar.addClass("nameBar");
 //creat div search in bar  ins
 const search=$("<div></div>")
 search.addClass("search")
@@ -67,6 +75,7 @@ const sortBy=$(`<select name="sort" >
 <option value="comedy">comedy</option>
 <option value="Historical">Historical</option>
 <option value="Fiction">Fiction</option>
+<option value="animation">animation</option>
 </select>`)
 bar.append(sortBy)
 
@@ -101,6 +110,7 @@ array=[];
 const funMovie=()=>{
     const mainMovie=$("<div></div>")
     main.append(mainMovie)
+    mainMovie.addClass("mainMovie")
     //use map To view Movie in main
     movie.map((elem,i)=>{
         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div></div>`)
