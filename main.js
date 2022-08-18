@@ -26,9 +26,39 @@ const bar=$("<div>Movies</div>");
 main.append(bar)
 bar.addClass("bar");
 //creat div search in bar  ins
-const search=$("<div><input></input><button>search</button></div>")
+const search=$("<div></div>")
 search.addClass("search")
 bar.append(search)
+//creat button in search
+const buttonSearch=$(`<button claas=buttonSearch>search</button>`)
+search.append(buttonSearch)
+//creat input in search 
+const inputSearch=$(`<input class=inputSearch placeholder=Search >`)
+search.append(inputSearch)
+const searchFun=buttonSearch.on("click",()=>{
+   const c= movie.filter((elem,i)=>{
+  return elem.titleMovie===inputSearch.val()
+  
+    })
+c.forEach((elem,i)=>{
+    main.text("")
+main.append(bar)
+
+    const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div><div>${elem.description}</div></div>`)
+        main.append(listMovie);
+        const back1=$("<button>Back</button>")
+        listMovie.append(back1)
+        //creat function back in click
+
+        const backFun= back1.on("click",()=>{
+
+            listMovie.text("")
+
+            funMovie()
+            
+        })
+})//console.log(c);
+})
 //creat button sort in bar 
 const sortBy=$(`<select name="sort" >
 <option value="all">all sort</option>
@@ -57,8 +87,8 @@ const favclick=Favorite.on("click",()=>{
     main.text("")
     main.append(bar)
     array.map((elem,i)=>{
-          const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}</div>`)
-        main.append(listMovie);
+         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div></div>`)
+        mainMovie.append(listMovie);
     })
 
 })
