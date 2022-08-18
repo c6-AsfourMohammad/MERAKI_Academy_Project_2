@@ -32,10 +32,20 @@ bar.append(Home)
 ///creat button favorite in bar
 const Favorite=$("<button>Favorite</button>")
 bar.append(Favorite)
+const favclick=Favorite.on("click",()=>{
+    main.text("")
+    main.append(bar)
+    array.map((elem,i)=>{
+          const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}</div>`)
+        main.append(listMovie);
+    })
+
+})
 //creat button login in bar 
 const Login=$("<button>Login</button>")
 bar.append(Login)
 index=0;
+array=[];
 //creat function funMovie for movie array
 const funMovie=()=>{
     const mainMovie=$("<div></div>")
@@ -50,17 +60,25 @@ const funMovie=()=>{
         mainMovie.text("")
         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}</div>`)
         mainMovie.append(listMovie);
-        const back1=$("<button>back</button>")
+        const back1=$("<button>Back</button>")
         listMovie.append(back1)
         const backFun= back1.on("click",()=>{
             listMovie.text("")
             funMovie()
+        })
+        const fav=$("<button>Add Favorite</button>")
+        listMovie.append(fav)
+       
+        const favoriteFun=fav.on("click",()=>{
+            array.push(elem)
+            console.log(array);
         })
     })
        
     })
 
 }
+
  console.log(funMovie());
 // sortBy.on("click",typeFun(e))
 // const typeFun=()=>{
