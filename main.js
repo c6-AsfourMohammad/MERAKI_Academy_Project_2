@@ -38,15 +38,30 @@ bar.append(Login)
 index=0;
 //creat function funMovie for movie array
 const funMovie=()=>{
+    const mainMovie=$("<div></div>")
+    main.append(mainMovie)
     //use map To view Movie
     movie.map((elem,i)=>{
         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}</div>`)
-        main.append(listMovie);
+        mainMovie.append(listMovie);
         listMovie.addClass("listMovie") 
        index++
+       listMovie.on("click",()=>{
+        mainMovie.text("")
+        const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}</div>`)
+        mainMovie.append(listMovie);
+        const back1=$("<button>back</button>")
+        listMovie.append(back1)
+        const backFun= back1.on("click",()=>{
+            listMovie.text("")
+            funMovie()
+        })
     })
+       
+    })
+
 }
-// console.log(funMovie());
+ console.log(funMovie());
 // sortBy.on("click",typeFun(e))
 // const typeFun=()=>{
 //     movie.filter((elem,i)=>{
@@ -55,6 +70,7 @@ const funMovie=()=>{
 //     })
 
 // }
+
 
 
 
