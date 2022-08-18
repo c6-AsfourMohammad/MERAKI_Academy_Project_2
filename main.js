@@ -3,7 +3,8 @@ const movie=[{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212bWJtRW1tbW1tcGFjdk5
 ,titleMovie:"Thor: Love and Thunder"
 ,type:"Fiction",
 description:"Thor reunites with Jane Foster and Valkyrie, and the trio's lives are in jeopardy with the appearance of Gore, who is charged with killing all the gods in the universe.",
-rate:"⭐⭐⭐⭐⭐"},
+rate:"⭐⭐⭐⭐⭐",
+link:"https://youtu.be/Go8nTmfrQd8"},
 {imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212bUVtbW1ZbW1wRUVjY3dhbWptam1Fd2Z3bA.jpg",
 titleMovie:"Top Gun: Maverick",
 type:"action",
@@ -23,7 +24,12 @@ rate:"⭐⭐⭐⭐"},
 ,titleMovie:"Minions: The Rise of Gru "
 ,type:"animation",
 description:"In the 1970s, a twelve-year-old puppy sets out to carry out his plan in which he hopes to become the most evil person on earth, and on his way encounters strange creatures.",
-rate:"⭐⭐⭐⭐"},]
+rate:"⭐⭐⭐⭐"},
+{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212dmNtYm1wdm1FbW1FY212bVRFbUVtRXZ0TmI.jpg"
+,titleMovie:"Prey"
+,type:"drama",
+description:"The work deals with the story of the famous predator known as the Predator and its original story from 300 years, where Naru, a skilled warrior, fights to protect her tribe from the predator.",
+rate:"⭐⭐⭐"},]
 //select to div(main)
 const main=$("#main");
 //creat div (bar) in top app 
@@ -40,9 +46,12 @@ bar.append(search)
 //creat button in search
 const buttonSearch=$(`<button claas=buttonSearch>search</button>`)
 search.append(buttonSearch)
+buttonSearch.addClass("buttonSearch")
+
 //creat input in search 
 const inputSearch=$(`<input class=inputSearch placeholder=Search >`)
 search.append(inputSearch)
+inputSearch.addClass("inputSearch")
 const searchFun=buttonSearch.on("click",()=>{
    const c= movie.filter((elem,i)=>{
   return elem.titleMovie===inputSearch.val()
@@ -56,6 +65,7 @@ main.append(bar)
         main.append(listMovie);
         const back1=$("<button>Back</button>")
         listMovie.append(back1)
+        back1.addClass("back1")
         //creat function back in click
 
         const backFun= back1.on("click",()=>{
@@ -65,10 +75,11 @@ main.append(bar)
             funMovie()
             
         })
-})//console.log(c);
+})
+//console.log(c);
 })
 //creat button sort in bar 
-const sortBy=$(`<select name="sort" >
+const sortBy=$(`<select class="sort" >
 <option value="all">all sort</option>
 <option value="action">action</option>
 <option value="drama">drama</option>
@@ -78,10 +89,21 @@ const sortBy=$(`<select name="sort" >
 <option value="animation">animation</option>
 </select>`)
 bar.append(sortBy)
-
+//creat function sort
+ const sortFun=sortBy.on("click",(e)=>{
+   const a=  movie.filter((elem,i)=>{
+         elem.type===e.target.value
+       
+   })  
+  a.forEach((elem,i)=>{
+    
+  })
+//console.log(e.target.value); 
+ })
 //creat button Home in bar 
 const Home=$("<button>Home</button>")
 bar.append(Home)
+Home.addClass("Home")
 //creat function Home
 const HomeFun=Home.on("click",()=>{
     main.text("")
@@ -92,18 +114,21 @@ main.append(bar)
 ///creat button favorite in bar
 const Favorite=$("<button>Favorite</button>")
 bar.append(Favorite)
+Favorite.addClass("Favorite")
+//creat function favclick
 const favclick=Favorite.on("click",()=>{
     main.text("")
     main.append(bar)
     array.map((elem,i)=>{
-         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div></div>`)
-        mainMovie.append(listMovie);
+         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div><div>${elem.description}</div></div>`)
+        main.append(listMovie);
     })
 
 })
 //creat button login in bar 
 const Login=$("<button>Login</button>")
 bar.append(Login)
+Login.addClass("Login")
 index=0;
 array=[];
 //creat function funMovie for movie array
@@ -111,6 +136,7 @@ const funMovie=()=>{
     const mainMovie=$("<div></div>")
     main.append(mainMovie)
     mainMovie.addClass("mainMovie")
+    
     //use map To view Movie in main
     movie.map((elem,i)=>{
         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div></div>`)
@@ -125,15 +151,21 @@ const funMovie=()=>{
         //creat button back 
         const back1=$("<button>Back</button>")
         listMovie.append(back1)
+        back1.addClass("back1")
         //creat function back in click
         const backFun= back1.on("click",()=>{
             listMovie.text("")
             funMovie()
             
         })
+        //creat button Trailer
+    const Trailer=$(`<div><iframe src=elem.link></iframe></div>`)
+    mainMovie.append(Trailer)
+    Trailer.addClass("Trailer")
         //creat button fav
         const fav=$("<button>Add Favorite</button>")
         listMovie.append(fav)
+        fav.addClass("AddFavorite")
        //creat function fav in click
         const favoriteFun=fav.on("click",()=>{
             array.push(elem)
