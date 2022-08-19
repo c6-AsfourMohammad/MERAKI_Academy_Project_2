@@ -25,7 +25,7 @@ font-family:cursive;
  border: 0px solid rgb(98, 95, 95);
  padding:1px; 
  margin-top: 20px;
- background-color: gray;
+ background-color: rgb(217, 213, 213);
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
  border-radius: 50px;
 } 
@@ -105,7 +105,7 @@ height: 100px;
  }
  .buttonSearch{
     height: 35px;
-    width:100px;
+    width:70px;
     background-color:black;
     color: azure;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -113,11 +113,13 @@ height: 100px;
  }
  .inputSearch{
     height: 30px;
-    width:150px;
+    width:180px;
     background-color:azure;
     color: black;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border-radius: 12px;
+    border-color:rgb(240, 210, 42) ;
+    border-top: rgb(240, 210, 42);
  }
   .back1{
     
