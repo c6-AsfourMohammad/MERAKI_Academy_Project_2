@@ -1,4 +1,10 @@
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
 .nameBar{
     color:black;
     font-size: 50px;
@@ -6,7 +12,7 @@
 font-family:cursive;
 }
 .search{
-    font-size:xx-large;
+    font-size:x-large;
 }
 .bar{
     display:flex ;
@@ -18,7 +24,7 @@ font-family:cursive;
     position: sticky;
     border-radius: 20px;
 }
- .listMovie{
+ .listMovie1{
  display: grid;  
   justify-content: center; 
  font-size:x-large;
@@ -29,17 +35,18 @@ font-family:cursive;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
  border-radius: 50px;
 } 
+.listMovie1:hover{
+    width: 450px;
+    padding:10px;
+    box-shadow: 0 8px 16px 0 rgb(240, 210, 42), 0 6px 20px 0 rgb(240, 210, 42);
+}
 .mainMovie{
     display: grid;
     grid-template-columns: 30% 30% 30% ;
     justify-content:space-between;
     
 }
-.listMovie:hover{
-    width: 450px;
-    padding:10px;
-    box-shadow: 0 8px 16px 0 rgb(240, 210, 42), 0 6px 20px 0 rgb(240, 210, 42);
-}
+
 .sort{
 width: 100px;
 height: 100px;
@@ -52,9 +59,15 @@ height: 100px;
    width:130px;
    background-color:rgb(240, 210, 42);
    color: black;
-   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
    border-radius: 12px;
-
+   margin-top: 25px;
+   border-color:rgb(240, 210, 42) ;
+   border-top: rgb(240, 210, 42);
+   border-bottom: rgb(240, 210, 42) ;
+   border-right:rgb(240, 210, 42) ;
+   font-family:cursive;
+   font-size: 30px;
 }
 .sort:hover{
     background-color: black; 
@@ -66,8 +79,15 @@ height: 100px;
     width:130px;
     background-color:rgb(240, 210, 42);
     color: black;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
     border-radius: 12px;
+    margin-top: 25px;
+    border-color:rgb(240, 210, 42) ;
+    border-top: rgb(240, 210, 42);
+    border-bottom: rgb(240, 210, 42) ;
+    border-right:rgb(240, 210, 42) ;
+    font-family:cursive;
+    font-size: 30px;
 
  }
  .Home:hover{
@@ -80,9 +100,15 @@ height: 100px;
     width:130px;
     background-color:rgb(240, 210, 42);
     color: black;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
     border-radius: 12px;
-
+    margin-top: 25px;
+    border-color:rgb(240, 210, 42) ;
+    border-top: rgb(240, 210, 42);
+    border-bottom: rgb(240, 210, 42) ;
+    border-right:rgb(240, 210, 42) ;
+    font-family:cursive;
+    font-size: 30px;
  }
  .Favorite:hover{
     background-color: black; 
@@ -94,36 +120,61 @@ height: 100px;
     width:130px;
     background-color:rgb(240, 210, 42);
     color: black;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
     border-radius: 12px;
-    
+    margin-top: 25px;
+    border-color:rgb(240, 210, 42) ;
+    border-top: rgb(240, 210, 42);
+    border-bottom: rgb(240, 210, 42) ;
+    border-right:rgb(240, 210, 42) ;
+    font-family:cursive;
+    font-size: 30px;
  }
  .Login:hover{
     background-color: black; 
     color:azure; 
     border: 2px solid black;
+
  }
  .buttonSearch{
-    height: 35px;
-    width:70px;
-    background-color:black;
-    color: azure;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    height: 50px;
+    width:100px;
+    background-color:rgb(240, 210, 42);
+    color: black;
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
     border-radius: 12px;
+    margin-top: 25px;
+    border-color:rgb(240, 210, 42) ;
+    border-top: rgb(240, 210, 42);
+    border-bottom: rgb(240, 210, 42) ;
+    border-right:rgb(240, 210, 42) ;
+    font-family:cursive;
+    font-size: 30px;
+ }
+ .buttonSearch:hover{
+    background-color: black; 
+    color:azure; 
+    border: 2px solid black;
  }
  .inputSearch{
     height: 30px;
-    width:180px;
+    width:200px;
     background-color:azure;
     color: black;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
     border-radius: 12px;
     border-color:rgb(240, 210, 42) ;
     border-top: rgb(240, 210, 42);
+    border-bottom: rgb(240, 210, 42) ;
+    border-right:rgb(240, 210, 42) ;
+    font-family:cursive;
+    font-size: 30px;
+    margin-top: 25px;
  }
   .back1{
-    
-   margin-left: 600px;
+    display: grid;
+    justify-content: center;
+   
     font-size: x-large;
     background-color: black;
     color: azure;
@@ -132,8 +183,10 @@ height: 100px;
  }
  
  .AddFavorite{
-   margin-left: 700px;
-
+    display: flex;
+    justify-content: center;
+   /* margin-left: 700px;
+   margin-bottom: 200px; */
    font-size: large;
    background-color: black;
    color: azure;
@@ -163,5 +216,11 @@ height: 100px;
     background-color: rgb(240, 210, 42); 
     color:black; 
     border: 2px solid black;
+ }
+ .listMovie2{
+   margin-left: 200px;
+   margin-top: 20px;
+   border-radius: 12px;
+   font-size: large;
  }
  

@@ -4,7 +4,7 @@ const movie=[{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212bWJtRW1tbW1tcGFjdk5
 ,type:"Fiction",
 description:"Thor reunites with Jane Foster and Valkyrie, and the trio's lives are in jeopardy with the appearance of Gore, who is charged with killing all the gods in the universe.",
 rate:"⭐⭐⭐⭐⭐",
-link:"https://youtu.be/Go8nTmfrQd8"},
+link:"https://www.youtube.com/embed/Go8nTmfrQd8"},
 {imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212bUVtbW1ZbW1wRUVjY3dhbWptam1Fd2Z3bA.jpg",
 titleMovie:"Top Gun: Maverick",
 type:"action",
@@ -124,7 +124,7 @@ const favclick=Favorite.on("click",()=>{
     main.append(bar)
     const favArray= localStorage.getItem("Fav");
     JSON.parse(favArray);
-    console.log(favArray[0]);
+    console.log(favArray);
 
     favArray.map((elem,i)=>{
          const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.description}</div></div>`)
@@ -150,13 +150,15 @@ const funMovie=()=>{
     movie.map((elem,i)=>{
         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div></div>`)
         mainMovie.append(listMovie);
-        listMovie.addClass("listMovie") 
+        listMovie.addClass("listMovie1") ;
        index++
        //click in the img
        listMovie.on("click",()=>{
         mainMovie.text("")
         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.description}</div><div>${elem.rate}</div></div>`)
         mainMovie.append(listMovie);
+        listMovie.addClass("listMovie2") 
+
         //creat button back 
         const back1=$("<button>Back</button>")
         listMovie.append(back1)
