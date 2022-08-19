@@ -36,7 +36,7 @@ const main=$("#main");
 const bar=$("<div></div>");
 main.append(bar)
 bar.addClass("bar");
-const nameBar=$("<div>Shahid</div>");
+const nameBar=$("<div>Shahid <span style=color:gray>App</span></div>");
 bar.append(nameBar)
 bar.addClass("nameBar");
 //creat div search in bar  ins
@@ -63,6 +63,7 @@ main.append(bar)
 
     const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div><div>${elem.description}</div></div>`)
         main.append(listMovie);
+        listMovie.addClass("listMovie1")
         const back1=$("<button>Back</button>")
         listMovie.append(back1)
         back1.addClass("back1")
@@ -120,8 +121,10 @@ const favclick=Favorite.on("click",()=>{
     main.text("")
     main.append(bar)
     array.map((elem,i)=>{
-         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div><div>${elem.description}</div></div>`)
+         const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.description}</div></div>`)
         main.append(listMovie);
+        listMovie.addClass("listMovieFavorite")
+        
     })
 
 })

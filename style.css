@@ -1,8 +1,9 @@
 
 .nameBar{
-    color: gray;
+    color:black;
     font-size: 50px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+font-family:cursive;
 }
 .search{
     font-size:xx-large;
@@ -15,17 +16,18 @@
     height: 100px;
      top: 0px; 
     position: sticky;
+    border-radius: 20px;
 }
  .listMovie{
  display: grid;  
   justify-content: center; 
  font-size:x-large;
- border: 2px solid rgb(98, 95, 95);
+ border: 0px solid rgb(98, 95, 95);
  padding:1px; 
  margin-top: 20px;
  background-color: gray;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
- 
+ border-radius: 50px;
 } 
 .mainMovie{
     display: grid;
@@ -117,9 +119,47 @@ height: 100px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border-radius: 12px;
  }
- .back1{
-    background-color: blueviolet;
+  .back1{
+    
+   margin-left: 600px;
+    font-size: x-large;
+    background-color: black;
+    color: azure;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 12px;
  }
+ 
  .AddFavorite{
-    background-color: green;
+   margin-left: 700px;
+
+   font-size: large;
+   background-color: black;
+   color: azure;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   border-radius: 12px;
+ } 
+ .Trailer{
+    height: 150px;
+    width: 100px;
+    display: flex;
+   margin-left: 600px;
+   margin-top: 200px;
  }
+ .listMovieFavorite{
+    display: grid;
+    grid-template-columns: 20% 10% 50%;
+    justify-content:center;
+    font-size: x-large;
+    margin-top: 100px;
+ }
+ .back1:hover{
+    background-color: rgb(240, 210, 42); 
+    color:black; 
+    border: 2px solid black;
+ }
+ .AddFavorite:hover{
+    background-color: rgb(240, 210, 42); 
+    color:black; 
+    border: 2px solid black;
+ }
+ 
