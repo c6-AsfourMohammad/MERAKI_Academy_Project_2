@@ -45,7 +45,7 @@ const search=$("<div></div>")
 search.addClass("search")
 bar.append(search)
 //creat button in search
-const inputSearch=$(`<input class=inputSearch placeholder=Search >`)
+const inputSearch=$(`<input class=inputSearch placeholder=Search... >`)
 search.append(inputSearch)
 
 inputSearch.addClass("inputSearch")
@@ -98,6 +98,7 @@ bar.append(sortBy)
        
    })  
   a.forEach((elem,i)=>{
+    
   })
 //console.log(e.target.value); 
  })
@@ -120,10 +121,10 @@ const favclick=Favorite.on("click",()=>{
     main.text("")
     main.append(bar)
     const favArray= localStorage.getItem("Fav");
-    JSON.parse(favArray);
-    console.log(favArray);
+     JSON.parse(favArray);
+     console.log(favArray);
 
-    favArray.map((elem,i)=>{
+    array.map((elem,i)=>{
          const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.description}</div></div>`)
         main.append(listMovie);
         listMovie.addClass("listMovieFavorite")  
@@ -142,7 +143,7 @@ darkMode.addClass("darkMode")
 
    darkMode.on("click",()=>{
     main.css("background-color", "black")
-    nameBar.css("color","rgb(98, 95, 95)")
+    nameBar.css("color","azure")
 
     bar.css("background-color","rgb(98, 95, 95)")
     Home.css("background-color","rgb(98, 95, 95)")
@@ -224,16 +225,17 @@ const funMovie=()=>{
         listMovie.append(fav)
         fav.addClass("AddFavorite")
        //creat function fav in click
-        const favoriteFun=fav.on("click",()=>{
+       fav.on("click",()=>{
             array.push(elem)
-            if(localStorage.getItem("Fav")){
-                localStorage.setItem("Fav", JSON.stringify(...JSON.parse(localStorage.getItem("Fav")),array));
+            // if(localStorage.getItem("Fav")){
+            //     localStorage.setItem("Fav", JSON.stringify(array));
 
-               }else{
+            //    }else{
                 localStorage.setItem("Fav",JSON.stringify(array))
-               }
-            // console.log(array);
+            //    }
+            //console.log(array);
         })
+        
     })
        
     })

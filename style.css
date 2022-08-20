@@ -35,17 +35,19 @@ font-family:cursive;
  background-color: rgb(217, 213, 213);
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
  border-radius: 50px;
+ margin-left: 20px;
+ margin-right: 20px;
 } 
 .listMovie1:hover{
-    width: 450px;
+    width: 420px;
     padding:10px;
     box-shadow: 0 8px 16px 0 rgb(240, 210, 42), 0 6px 20px 0 rgb(240, 210, 42);
 }
 .mainMovie{
     display: grid;
     grid-template-columns: 30% 30% 30% ;
-    justify-content:space-between;
-    
+    /* justify-content:space-between; */
+    justify-content: center;
 }
 
 .sort{
@@ -158,8 +160,8 @@ color:azure;
 border: 2px solid black;
 }
 .inputSearch{
-height: 30px;
-width:200px;
+height: 40px;
+width:250px;
 background-color:azure;
 color: black;
     /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
@@ -169,7 +171,7 @@ border-top: rgb(240, 210, 42);
 border-bottom: rgb(240, 210, 42) ;
 border-right:rgb(240, 210, 42) ;
 font-family:cursive;
-font-size: 30px;
+font-size: 22px;
 margin-top: 25px;
 }
 .back1{
