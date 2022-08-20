@@ -51,7 +51,9 @@ search.append(inputSearch)
 inputSearch.addClass("inputSearch")
 
 //creat input in search 
-const buttonSearch=$(`<button claas=buttonSearch>search</button>`)
+const buttonSearch=$(`<button claas=buttonSearch><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg></button>`)
 search.append(buttonSearch)
 buttonSearch.addClass("buttonSearch")
 const searchFun=buttonSearch.on("click",()=>{
@@ -92,14 +94,28 @@ const sortBy=$(`<select class="sort" >
 </select>`)
 bar.append(sortBy)
 //creat function sort
- const sortFun=sortBy.on("click",(e)=>{
+ const sortFun=sortBy.on("change",(e)=>{
    const a=  movie.filter((elem,i)=>{
          elem.type===e.target.value
        
    })  
-  a.forEach((elem,i)=>{
-    
-  })
+   a.forEach((elem1,i)=>{
+    const listMovie=$(`<div><img src="${elem1.imgMovie}"/>${elem1.titleMovie}<div>${elem1.rate}</div><div>${elem1.description}</div></div>`)
+    main.append(listMovie);
+    listMovie.addClass("listMovie4")
+    const back1=$("<button>Back</button>")
+    listMovie.append(back1)
+    back1.addClass("back2")
+    //creat function back in click
+
+    const backFun= back1.on("click",()=>{
+
+        listMovie.text("")
+
+        funMovie()
+        
+    })
+})
 //console.log(e.target.value); 
  })
 //creat button Home in bar 
@@ -135,7 +151,9 @@ const Login=$("<button>Login</button>")
 bar.append(Login)
 Login.addClass("Login")
 //creat dark mode in bar
-const darkMode=$("<button>Dark mode</button>")
+const darkMode=$(`<button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+<path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg></button>`)
 bar.append(darkMode)
 darkMode.addClass("darkMode")
 //creat function dark mode
@@ -202,10 +220,10 @@ const funMovie=()=>{
        //click in the img
        listMovie.on("click",()=>{
         mainMovie.text("")
-        const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.description}</div><div>${elem.rate}</div></div>`)
+        const listMovie=$(`<div><img  class="img1" src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.description}</div><div>${elem.rate}</div></div>`)
         mainMovie.append(listMovie);
         listMovie.addClass("listMovie2") 
-
+mainMovie.addClass("mainMovie2")
         //creat button back 
         const back1=$("<button>Back</button>")
         listMovie.append(back1)

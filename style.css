@@ -141,7 +141,7 @@ border: 2px solid black;
 }
 .buttonSearch{
 height: 50px;
-width:100px;
+width:50px;
 background-color:rgb(240, 210, 42);
 color: black;
     /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
@@ -153,12 +153,13 @@ border-bottom: rgb(240, 210, 42) ;
 border-right:rgb(240, 210, 42) ;
 font-family:cursive;
 font-size: 30px;
+margin-right: 20px;
 }
-.buttonSearch:hover{
+/* .buttonSearch:hover{
 background-color: black; 
 color:azure; 
 border: 2px solid black;
-}
+} */
 .inputSearch{
 height: 40px;
 width:250px;
@@ -173,6 +174,7 @@ border-right:rgb(240, 210, 42) ;
 font-family:cursive;
 font-size: 22px;
 margin-top: 25px;
+
 }
 .back1{
 display: grid;
@@ -228,16 +230,30 @@ background-color: rgb(240, 210, 42);
 color:black; 
 border: 2px solid black;
  }
+ .mainMovie2{
+   display: grid;
+   justify-content: center;
+   margin-left: 300px;
+  
+
+}
  .listMovie2{
 display: grid;  
 justify-content: center; 
 font-size:x-large;
 border: 0px solid rgb(98, 95, 95);
-padding:1px; 
+padding:10px; 
 margin-top: 20px;
 background-color: rgb(217, 213, 213);
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-border-radius: 50px
+border-radius: 50px;
+width: 500px;
+
+margin-left: 100px;
+
+}
+.img1{
+   margin-left: 90px;
 }
 .listMovie3{
    display: grid;  
