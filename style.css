@@ -121,70 +121,78 @@ height: 100px;
     background-color:rgb(240, 210, 42);
     color: black;
     /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
-    border-radius: 12px;
-    margin-top: 25px;
-    border-color:rgb(240, 210, 42) ;
-    border-top: rgb(240, 210, 42);
-    border-bottom: rgb(240, 210, 42) ;
-    border-right:rgb(240, 210, 42) ;
-    font-family:cursive;
-    font-size: 30px;
- }
- .Login:hover{
-    background-color: black; 
-    color:azure; 
-    border: 2px solid black;
+border-radius: 12px;
+margin-top: 25px;
+border-color:rgb(240, 210, 42) ;
+border-top: rgb(240, 210, 42);
+border-bottom: rgb(240, 210, 42) ;
+border-right:rgb(240, 210, 42) ;
+font-family:cursive;
+font-size: 30px;
+}
+.Login:hover{
+background-color: black; 
+color:azure; 
+border: 2px solid black;
 
- }
- .buttonSearch{
-    height: 50px;
-    width:100px;
-    background-color:rgb(240, 210, 42);
-    color: black;
+}
+.buttonSearch{
+height: 50px;
+width:100px;
+background-color:rgb(240, 210, 42);
+color: black;
     /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
-    border-radius: 12px;
-    margin-top: 25px;
-    border-color:rgb(240, 210, 42) ;
-    border-top: rgb(240, 210, 42);
-    border-bottom: rgb(240, 210, 42) ;
-    border-right:rgb(240, 210, 42) ;
-    font-family:cursive;
-    font-size: 30px;
- }
- .buttonSearch:hover{
-    background-color: black; 
-    color:azure; 
-    border: 2px solid black;
- }
- .inputSearch{
-    height: 30px;
-    width:200px;
-    background-color:azure;
-    color: black;
+border-radius: 12px;
+margin-top: 25px;
+border-color:rgb(240, 210, 42) ;
+border-top: rgb(240, 210, 42);
+border-bottom: rgb(240, 210, 42) ;
+border-right:rgb(240, 210, 42) ;
+font-family:cursive;
+font-size: 30px;
+}
+.buttonSearch:hover{
+background-color: black; 
+color:azure; 
+border: 2px solid black;
+}
+.inputSearch{
+height: 30px;
+width:200px;
+background-color:azure;
+color: black;
     /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
-    border-radius: 12px;
-    border-color:rgb(240, 210, 42) ;
-    border-top: rgb(240, 210, 42);
-    border-bottom: rgb(240, 210, 42) ;
-    border-right:rgb(240, 210, 42) ;
-    font-family:cursive;
-    font-size: 30px;
-    margin-top: 25px;
- }
-  .back1{
-    display: grid;
-    justify-content: center;
+border-radius: 12px;
+border-color:rgb(240, 210, 42) ;
+border-top: rgb(240, 210, 42);
+border-bottom: rgb(240, 210, 42) ;
+border-right:rgb(240, 210, 42) ;
+font-family:cursive;
+font-size: 30px;
+margin-top: 25px;
+}
+.back1{
+display: grid;
+justify-content:center;
+font-size: x-large;
+background-color: black;
+color: azure;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+border-radius: 12px;
+width: 100px;
+margin-top: 30px;
+
+}
+.back1:hover{
    
-    font-size: x-large;
-    background-color: black;
-    color: azure;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    border-radius: 12px;
- }
- 
- .AddFavorite{
-    display: flex;
-    justify-content: center;
+   background-color: rgb(240, 210, 42); 
+   color:black; 
+   border: 2px solid black;
+}
+
+.AddFavorite{
+display: flex;
+justify-content: center;
    /* margin-left: 700px;
    margin-bottom: 200px; */
    font-size: large;
@@ -192,35 +200,50 @@ height: 100px;
    color: azure;
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
    border-radius: 12px;
- } 
- .Trailer{
-    height: 150px;
-    width: 100px;
-    display: flex;
-   margin-left: 600px;
-   margin-top: 200px;
- }
- .listMovieFavorite{
-    display: grid;
-    grid-template-columns: 20% 10% 50%;
-    justify-content:center;
-    font-size: x-large;
-    margin-top: 100px;
- }
- .back1:hover{
-    background-color: rgb(240, 210, 42); 
-    color:black; 
-    border: 2px solid black;
- }
- .AddFavorite:hover{
-    background-color: rgb(240, 210, 42); 
-    color:black; 
-    border: 2px solid black;
- }
- .listMovie2{
-   margin-left: 200px;
-   margin-top: 20px;
-   border-radius: 12px;
-   font-size: large;
+width: 150px;
+height: 30px;
+margin-left: 120px;
+margin-top: -30px;
+} 
+.Trailer{
+height: 150px;
+width: 100px;
+display: flex;
+margin-left: 600px;
+margin-top: 200px;
+}
+.listMovieFavorite{
+display: grid;
+grid-template-columns: 20% 10% 50%;
+justify-content:center;
+font-size: x-large;
+margin-top: 100px;
  }
  
+ .AddFavorite:hover{
+background-color: rgb(240, 210, 42); 
+color:black; 
+border: 2px solid black;
+ }
+ .listMovie2{
+display: grid;  
+justify-content: center; 
+font-size:x-large;
+border: 0px solid rgb(98, 95, 95);
+padding:1px; 
+margin-top: 20px;
+background-color: rgb(217, 213, 213);
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+border-radius: 50px
+}
+.listMovie3{
+   display: grid;  
+  justify-content: center; 
+ font-size:x-large;
+ border: 0px solid rgb(98, 95, 95);
+ padding:1px; 
+ margin-top: 20px;
+ background-color: rgb(217, 213, 213);
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ border-radius: 50px;
+}

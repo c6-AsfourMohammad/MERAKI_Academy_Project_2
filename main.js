@@ -44,19 +44,18 @@ const search=$("<div></div>")
 search.addClass("search")
 bar.append(search)
 //creat button in search
-const buttonSearch=$(`<input class=inputSearch placeholder=Search >`)
-search.append(buttonSearch)
+const inputSearch=$(`<input class=inputSearch placeholder=Search >`)
+search.append(inputSearch)
 
-buttonSearch.addClass("inputSearch")
+inputSearch.addClass("inputSearch")
 
 //creat input in search 
-const inputSearch=$(`<button claas=buttonSearch>search</button>`)
-search.append(inputSearch)
-inputSearch.addClass("buttonSearch")
+const buttonSearch=$(`<button claas=buttonSearch>search</button>`)
+search.append(buttonSearch)
+buttonSearch.addClass("buttonSearch")
 const searchFun=buttonSearch.on("click",()=>{
    const c= movie.filter((elem,i)=>{
   return elem.titleMovie===inputSearch.val()
-  
     })
 c.forEach((elem,i)=>{
     main.text("")
@@ -64,7 +63,7 @@ main.append(bar)
 
     const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div><div>${elem.description}</div></div>`)
         main.append(listMovie);
-        listMovie.addClass("listMovie1")
+        listMovie.addClass("listMovie3")
         const back1=$("<button>Back</button>")
         listMovie.append(back1)
         back1.addClass("back1")
@@ -98,7 +97,6 @@ bar.append(sortBy)
        
    })  
   a.forEach((elem,i)=>{
-    
   })
 //console.log(e.target.value); 
  })
@@ -110,7 +108,6 @@ Home.addClass("Home")
 const HomeFun=Home.on("click",()=>{
     main.text("")
 main.append(bar)
-   
     funMovie()
 })
 ///creat button favorite in bar
@@ -118,7 +115,6 @@ const Favorite=$("<button>Favorite</button>")
 bar.append(Favorite)
 Favorite.addClass("Favorite")
 //creat function favclick
-
 const favclick=Favorite.on("click",()=>{
     main.text("")
     main.append(bar)
@@ -129,10 +125,8 @@ const favclick=Favorite.on("click",()=>{
     favArray.map((elem,i)=>{
          const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.description}</div></div>`)
         main.append(listMovie);
-        listMovie.addClass("listMovieFavorite")
-        
+        listMovie.addClass("listMovieFavorite")  
     })
-
 })
 //creat button login in bar 
 const Login=$("<button>Login</button>")
@@ -186,7 +180,6 @@ const funMovie=()=>{
                }else{
                 localStorage.setItem("Fav",JSON.stringify(array))
                }
-
             // console.log(array);
         })
     })
