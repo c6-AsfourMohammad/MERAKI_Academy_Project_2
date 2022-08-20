@@ -139,11 +139,37 @@ bar.append(darkMode)
 darkMode.addClass("darkMode")
 //creat function dark mode
 
-const darkFun=()=>{
+
    darkMode.on("click",()=>{
+    main.css("background-color", "black")
+    nameBar.css("color","rgb(217, 213, 213)")
+
+    bar.css("background-color","rgb(98, 95, 95)")
+    Home.css("background-color","rgb(98, 95, 95)")
+    Home.css("border-left","rgb(98, 95, 95)")
+
+    sortBy.css("background-color","rgb(98, 95, 95)")
+    sortBy.css("border-left","rgb(98, 95, 95)")
+
+    buttonSearch.css("background-color","rgb(98, 95, 95)")
+    buttonSearch.css("border-left","rgb(98, 95, 95)")
+
+    Favorite.css("background-color","rgb(98, 95, 95)")
+    Favorite.css("border-left","rgb(98, 95, 95)")
+
+    Login.css("background-color","rgb(98, 95, 95)")
+    Login.css("border-left","rgb(98, 95, 95)")
+
+    darkMode.css("background-color","rgb(98, 95, 95)")
+    darkMode.css("border-left","rgb(98, 95, 95)")
+
+    darkMode.on("click",()=>{
+        main.css("background-color", "azure")
+      
+       })
     
    })
-}
+   
 index=0;
 array=[];
 //creat function funMovie for movie array
