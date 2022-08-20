@@ -142,7 +142,7 @@ darkMode.addClass("darkMode")
 
    darkMode.on("click",()=>{
     main.css("background-color", "black")
-    nameBar.css("color","rgb(217, 213, 213)")
+    nameBar.css("color","rgb(98, 95, 95)")
 
     bar.css("background-color","rgb(98, 95, 95)")
     Home.css("background-color","rgb(98, 95, 95)")
@@ -165,11 +165,25 @@ darkMode.addClass("darkMode")
 
     darkMode.on("click",()=>{
         main.css("background-color", "azure")
-      
-       })
+        nameBar.css("color","black")
+        bar.css("background-color","rgb(240, 210, 42)")
+        Home.css("background-color","rgb(240, 210, 42)")
+        Home.css("border-left","rgb(240, 210, 42)")
+        sortBy.css("background-color","rgb(240, 210, 42)")
+        sortBy.css("border-left","rgb(240, 210, 42)")
+        buttonSearch.css("background-color","rgb(240, 210, 42)")
+        buttonSearch.css("border-left","rgb(240, 210, 42)")
     
+        Favorite.css("background-color","rgb(240, 210, 42)")
+        Favorite.css("border-left","rgb(240, 210, 42)")
+    
+        Login.css("background-color","rgb(240, 210, 42)")
+        Login.css("border-left","rgb(240, 210, 42)")
+    
+        darkMode.css("background-color","rgb(240, 210, 42)")
+        darkMode.css("border-left","rgb(240, 210, 42)")
    })
-   
+   })
 index=0;
 array=[];
 //creat function funMovie for movie array
