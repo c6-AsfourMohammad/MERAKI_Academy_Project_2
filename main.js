@@ -36,6 +36,7 @@ const main=$("#main");
 const bar=$("<div></div>");
 main.append(bar)
 bar.addClass("bar");
+
 const nameBar=$("<div>Shahid <span style=color:gray>App</span></div>");
 bar.append(nameBar)
 bar.addClass("nameBar");
@@ -132,6 +133,17 @@ const favclick=Favorite.on("click",()=>{
 const Login=$("<button>Login</button>")
 bar.append(Login)
 Login.addClass("Login")
+//creat dark mode in bar
+const darkMode=$("<button>Dark mode</button>")
+bar.append(darkMode)
+darkMode.addClass("darkMode")
+//creat function dark mode
+
+const darkFun=()=>{
+   darkMode.on("click",()=>{
+    
+   })
+}
 index=0;
 array=[];
 //creat function funMovie for movie array
