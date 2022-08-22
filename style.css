@@ -3,6 +3,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    margin-bottom: 10px;
   }
   @media screen and (min-width: 480px) {
  
@@ -209,7 +210,7 @@ justify-content: center;
 width: 150px;
 height: 30px;
 margin-left: 120px;
-margin-top: -30px;
+/* margin-top: -5px; */
 } 
 .Trailer{
 height: 50px;

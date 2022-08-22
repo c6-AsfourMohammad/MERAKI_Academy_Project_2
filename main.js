@@ -87,6 +87,7 @@ main.append(bar)
         const backFun= back1.on("click",()=>{
 
             listMovie.text("")
+           
 
             funMovie()
             
@@ -123,7 +124,7 @@ bar.append(sortBy)
     const backFun= back1.on("click",()=>{
 
         listMovie.text("")
-
+        
         funMovie()
         
     })
@@ -238,6 +239,7 @@ mainMovie.addClass("mainMovie2")
         //creat function back in click
         const backFun= back1.on("click",()=>{
             listMovie.text("")
+            mainMovie.text("")
             funMovie()
             
         })
