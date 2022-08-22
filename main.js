@@ -126,13 +126,9 @@ bar.append(sortBy)
     listMovie.append(back1)
     back1.addClass("back2")
     //creat function back in click
-
     const backFun= back1.on("click",()=>{
-
         listMovie.text("")
-        
         funMovie()
-        
     })
 })
 //console.log(e.target.value); 
@@ -163,6 +159,7 @@ const favclick=Favorite.on("click",()=>{
         main.text("")
     main.append(bar)
         funMovie()
+        
     })
     // const favArray= localStorage.getItem("Fav");
     //  JSON.parse(favArray);
@@ -174,6 +171,7 @@ const favclick=Favorite.on("click",()=>{
         listMovie.addClass("listMovieFavorite")  
     })
 })
+
 //creat button login in bar 
 const Login=$(`<button><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="svgLogin" viewBox="0 0 16 16">
 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -181,6 +179,28 @@ const Login=$(`<button><svg xmlns="http://www.w3.org/2000/svg" width="45" height
 </svg></button>`)
 bar.append(Login)
 Login.addClass("Login")
+Login.on("click",()=>{
+    main.text("")
+    main.append(bar)
+    login2=$(`<div class="login1"><h1 class="h1login">Login</h1>
+    <input placeholder="User name"/>
+    <input placeholder="Password" type="Password"/>
+    <button >Login</button>
+    </div>`)
+    Login.append(login2)
+    const reg1=$(`<button class="Register">Register</button>`)
+    login2.append(reg1)
+    reg1.on("click",()=>{
+        main.text("")
+        Login.text("")
+        const reg=$(`<div class="reg"><h1>Register</h1><input placeholder="User name"/><input placeholder="Password" type="Password"/><input placeholder="Password" type="Password"/><button>Register</button></div>`)
+        main.append(bar)
+        main.append(reg)
+        
+
+    })
+})
+
 //creat dark mode in bar
 const darkMode=$(`<button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
 <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
@@ -262,7 +282,7 @@ mainMovie.addClass("mainMovie2")
             
         })
         //creat button Trailer
-    const Trailer=$(`<div><a href="${elem.link}" class:"link">Trailer</a></div>`)
+    const Trailer=$(`<div><button class="back1"><a href="${elem.link}" class:"link">Trailer</a></button></div>`)
     mainMovie.append(Trailer)
     Trailer.addClass("Trailer")
         //creat button fav

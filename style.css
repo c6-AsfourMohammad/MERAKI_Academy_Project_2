@@ -5,10 +5,7 @@
     box-sizing: border-box;
     margin-bottom: 10px;
   }
-  @media screen and (min-width: 480px) {
  
-
-  }
 .nameBar{
     color:black;
     font-size: 50px;
@@ -213,12 +210,17 @@ height: 50px;
 margin-left: 190px;
 margin-top: -60px; 
 } 
+a{
+   text-decoration: none;
+color: azure;
+
+}
 .Trailer{
    display: flex;
 height: 50px;
 width: 50px;
-margin-left: 60px;
-margin-top: 760px;
+
+margin-top: 710px;
 font-size: 30px;
 color: black;
   
