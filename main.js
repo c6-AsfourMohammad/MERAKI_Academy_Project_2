@@ -182,17 +182,39 @@ Login.addClass("Login")
 Login.on("click",()=>{
     main.text("")
     main.append(bar)
-    login2=$(`<div class="login1"><h1 class="h1login">Login</h1>
-    <input placeholder="User name"/>
-    <input placeholder="Password" type="Password"/>
-    <button >Login</button>
-    </div>`)
+    login2=$(`<div class="login1"><h1 class="h1login">Login</h1></div>`)
     Login.append(login2)
+    const inputLogin1=$(` <input placeholder="User name"/>`)
+login2.append(inputLogin1)
+const inputLogin2=$(` <input placeholder="Password" type="Password"/>`)
+login2.append(inputLogin2)
     const reg1=$(`<button class="Register">Register</button>`)
     login2.append(reg1)
+    const loginButton=$(`<button >Login</button>`)
+    login2.append(loginButton)
+    loginButton.on("click",()=>{
+    users=JSON.parse(localStorage.getItem("users"));
+    if(inputLogin1.val()===undefined||inputLogin1.val()===null||inputLogin1.val()===""){
+        alert("please Enter User name and password ");
+    }
+    users.forEach((elem,i)=>{
+       
+     if(users[i].userName===inputLogin1.val()&&users[i].pass===inputLogin2.val()){
+        alert("Welcome  "+users[i].userName);
+        main.text("")
+        main.append(bar)
+        funMovie()
+     }else{
+        alert("Please Register ");
+     }
+
+     })
+    })
+
     reg1.on("click",()=>{
         main.text("")
-        Login.text("")
+        login2.text("")
+      
         const reg=$(`<div class="reg"><h1>Register</h1></div>`)
        const input1=$(`<input placeholder="User name"/>`)
        reg.append(input1)
