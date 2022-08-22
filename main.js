@@ -219,6 +219,13 @@ if(pass===undefined||pass===null||pass===""){
     alert("fill your password");
 return 
 }
+user={userName:userName,pass:pass};
+users.push(user)
+localStorage.setItem("users",JSON.stringify(users))
+alert("Done");
+reg.text("")
+Login.append(login2)
+
         })
 
     })
