@@ -1,35 +1,47 @@
 //creat array of object movie
-const movie=[{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212bWJtRW1tbW1tcGFjdk5tYW1ibGxtdm1n.jpg"
+const movie=
+//movie (1)
+[{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212bWJtRW1tbW1tcGFjdk5tYW1ibGxtdm1n.jpg"
 ,titleMovie:"Thor: Love and Thunder"
 ,type:"Fiction",
 description:"Thor reunites with Jane Foster and Valkyrie, and the trio's lives are in jeopardy with the appearance of Gore, who is charged with killing all the gods in the universe.",
 rate:"⭐⭐⭐⭐⭐",
 link:"https://www.youtube.com/embed/Go8nTmfrQd8"},
+//movie (2)
 {imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212bUVtbW1ZbW1wRUVjY3dhbWptam1Fd2Z3bA.jpg",
 titleMovie:"Top Gun: Maverick",
 type:"action",
 description:"After a career spanning more than thirty years to become one of the most qualified pilots in the US Air Force, Betty Mitchell takes a new step in his aviation career by experimenting with new aircraft.",
-rate:"⭐⭐⭐"},
+rate:"⭐⭐⭐",
+link:"https://youtu.be/giXco2jaZ_4"},
+//movie (3)
 {imgMovie:"https://i.egycdn.com/pic/WmFwZndlY21tdmNtYm12dk5MUmNsYW1FbUlhbWpsbA.jpg"
 ,titleMovie:"Uncharted"
 ,type:"action",
 description:"The events revolve around a young boy, Nathan Drake, and his relationship with Victor Sullivan, as the duo embark on many adventures in search of lost treasures, while Drake seeks to retrieve his family's legacy.",
-rate:"⭐⭐⭐⭐"},
+rate:"⭐⭐⭐⭐",
+link:"https://youtu.be/eHp3MbsCbMg"},
+//movie (4)
 {imgMovie:"https://i.egycdn.com/pic/WmFwZndlY21MTnZtYm1qbWptYWN4dmNtam1tbW13VG1tYg.jpg"
 ,titleMovie:"Joker"
 ,type:"drama",
 description:"Little by little, pressure and circumstances combine to make a failed comedian go crazy and turn into a criminal and a maniacal killer.",
-rate:"⭐⭐⭐⭐"},
+rate:"⭐⭐⭐⭐",
+link:"https://youtu.be/zAGVQLHvwOY"},
+//movie (5)
 {imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212bWptRW1MY21qbWJFY212bUVtZndhY05ibA.jpg"
 ,titleMovie:"Minions: The Rise of Gru "
 ,type:"animation",
 description:"In the 1970s, a twelve-year-old puppy sets out to carry out his plan in which he hopes to become the most evil person on earth, and on his way encounters strange creatures.",
-rate:"⭐⭐⭐⭐"},
+rate:"⭐⭐⭐⭐",
+link:"https://youtu.be/HhIl_XJ-OGA"},
+//movie (6)
 {imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212dmNtYm1wdm1FbW1FY212bVRFbUVtRXZ0TmI.jpg"
 ,titleMovie:"Prey"
 ,type:"drama",
 description:"The work deals with the story of the famous predator known as the Predator and its original story from 300 years, where Naru, a skilled warrior, fights to protect her tribe from the predator.",
-rate:"⭐⭐⭐"},]
+rate:"⭐⭐⭐",
+link:"https://youtu.be/3afFgl_bTW4"}]
 //select to div(main)
 const main=$("#main");
 //creat div (bar) in top app 
@@ -157,8 +169,6 @@ const darkMode=$(`<button><svg xmlns="http://www.w3.org/2000/svg" width="16" hei
 bar.append(darkMode)
 darkMode.addClass("darkMode")
 //creat function dark mode
-
-
    darkMode.on("click",()=>{
     main.css("background-color", "black")
     nameBar.css("color","azure")
@@ -181,7 +191,7 @@ darkMode.addClass("darkMode")
 
     darkMode.css("background-color","rgb(98, 95, 95)")
     darkMode.css("border-left","rgb(98, 95, 95)")
-
+//creat function light mode
     darkMode.on("click",()=>{
         main.css("background-color", "azure")
         nameBar.css("color","black")
@@ -192,13 +202,10 @@ darkMode.addClass("darkMode")
         sortBy.css("border-left","rgb(240, 210, 42)")
         buttonSearch.css("background-color","rgb(240, 210, 42)")
         buttonSearch.css("border-left","rgb(240, 210, 42)")
-    
         Favorite.css("background-color","rgb(240, 210, 42)")
         Favorite.css("border-left","rgb(240, 210, 42)")
-    
         Login.css("background-color","rgb(240, 210, 42)")
         Login.css("border-left","rgb(240, 210, 42)")
-    
         darkMode.css("background-color","rgb(240, 210, 42)")
         darkMode.css("border-left","rgb(240, 210, 42)")
    })
@@ -235,7 +242,7 @@ mainMovie.addClass("mainMovie2")
             
         })
         //creat button Trailer
-    const Trailer=$(`<div><iframe src=elem.link></iframe></div>`)
+    const Trailer=$(`<div><a href="${elem.link}">Trailer</a></div>`)
     mainMovie.append(Trailer)
     Trailer.addClass("Trailer")
         //creat button fav
