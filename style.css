@@ -55,24 +55,19 @@ font-family:cursive;
 }
 
 .sort{
-width: 100px;
-height: 100px;
-}
-
-.sort{
-   height: 50px;
+   height: 100px;
    width:130px;
    background-color:rgb(240, 210, 42);
    color: black;
    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
    border-radius: 12px;
-   margin-top: 25px;
+   margin-top: 0px;
    border-color:rgb(240, 210, 42) ;
    border-top: rgb(240, 210, 42);
    border-bottom: rgb(240, 210, 42) ;
    border-right:rgb(240, 210, 42) ;
    font-family:cursive;
-   font-size: 30px;
+   font-size: 25px;
 }
 .sort:hover{
     background-color: black; 
@@ -80,13 +75,14 @@ height: 100px;
     border: 2px solid black;
  }
 .Home{
-    height: 50px;
+    height: 100px;
     width:130px;
     background-color:rgb(240, 210, 42);
     color: black;
+    
     /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
     border-radius: 12px;
-    margin-top: 25px;
+    margin-top: 0px;
     border-color:rgb(240, 210, 42) ;
     border-top: rgb(240, 210, 42);
     border-bottom: rgb(240, 210, 42) ;
@@ -95,19 +91,22 @@ height: 100px;
     font-size: 30px;
 
  }
+ .svgHome{
+   font-size: xx-large;
+ }
  .Home:hover{
     background-color: black; 
     color:azure; 
     border: 2px solid black;
  }
  .Favorite{
-    height: 50px;
+    height: 100px;
     width:130px;
     background-color:rgb(240, 210, 42);
     color: black;
     /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
     border-radius: 12px;
-    margin-top: 25px;
+    margin-top: 0px;
     border-color:rgb(240, 210, 42) ;
     border-top: rgb(240, 210, 42);
     border-bottom: rgb(240, 210, 42) ;
@@ -121,13 +120,13 @@ height: 100px;
     border: 2px solid black;
  }
  .Login{
-    height: 50px;
+    height: 100px;
     width:130px;
     background-color:rgb(240, 210, 42);
     color: black;
     /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
 border-radius: 12px;
-margin-top: 25px;
+margin-top: 0px;
 border-color:rgb(240, 210, 42) ;
 border-top: rgb(240, 210, 42);
 border-bottom: rgb(240, 210, 42) ;
@@ -142,7 +141,7 @@ border: 2px solid black;
 
 }
 .buttonSearch{
-height: 50px;
+height: 10px;
 width:50px;
 background-color:rgb(240, 210, 42);
 color: black;
@@ -175,7 +174,7 @@ border-bottom: rgb(240, 210, 42) ;
 border-right:rgb(240, 210, 42) ;
 font-family:cursive;
 font-size: 22px;
-margin-top: 25px;
+margin-top: 20px;
 
 }
 .back1{
@@ -187,7 +186,9 @@ color: azure;
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 border-radius: 12px;
 width: 100px;
-margin-top: 30px;
+height: 50px;
+margin-top: 40px;
+margin-left: 70px;
 
 }
 .back1:hover{
@@ -207,25 +208,21 @@ justify-content: center;
    color: azure;
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
    border-radius: 12px;
-width: 150px;
-height: 30px;
-margin-left: 120px;
-/* margin-top: -5px; */
+width: 100px;
+height: 50px;
+margin-left: 190px;
+margin-top: -60px; 
 } 
 .Trailer{
+   display: flex;
 height: 50px;
 width: 50px;
-display: flex;
-margin-left: 120px;
-margin-top: 690px;
+margin-left: 60px;
+margin-top: 760px;
 font-size: 30px;
 color: black;
   
 }
-
-   
-
- 
 .listMovieFavorite{
 display: grid;
 grid-template-columns: 20% 10% 50%;
@@ -243,8 +240,6 @@ border: 2px solid black;
    display: grid;
    justify-content: center;
    margin-left: 300px;
-  
-
 }
  .listMovie2{
 display: grid;  
@@ -282,13 +277,14 @@ margin-left: 100px;
    color: black;
    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
 border-radius: 12px;
-margin-top: 25px;
+margin-top: 0px;
 border-color:rgb(240, 210, 42) ;
 border-top: rgb(240, 210, 42);
 border-bottom: rgb(240, 210, 42) ;
 border-right:rgb(240, 210, 42) ;
 font-family:cursive;
-font-size: 10px;
+font-size: 50px;
+height: 100px;
 }
 .darkMode:hover{
    background-color: black; 

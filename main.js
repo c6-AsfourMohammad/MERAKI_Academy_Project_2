@@ -5,6 +5,7 @@ const movie=
 ,titleMovie:"Thor: Love and Thunder"
 ,type:"Fiction",
 description:"Thor reunites with Jane Foster and Valkyrie, and the trio's lives are in jeopardy with the appearance of Gore, who is charged with killing all the gods in the universe.",
+time:"Time:01:48:36",
 rate:"⭐⭐⭐⭐⭐",
 link:"https://www.youtube.com/embed/Go8nTmfrQd8"},
 //movie (2)
@@ -12,6 +13,7 @@ link:"https://www.youtube.com/embed/Go8nTmfrQd8"},
 titleMovie:"Top Gun: Maverick",
 type:"action",
 description:"After a career spanning more than thirty years to become one of the most qualified pilots in the US Air Force, Betty Mitchell takes a new step in his aviation career by experimenting with new aircraft.",
+time:"Time:02:10:08",
 rate:"⭐⭐⭐",
 link:"https://youtu.be/giXco2jaZ_4"},
 //movie (3)
@@ -19,6 +21,7 @@ link:"https://youtu.be/giXco2jaZ_4"},
 ,titleMovie:"Uncharted"
 ,type:"action",
 description:"The events revolve around a young boy, Nathan Drake, and his relationship with Victor Sullivan, as the duo embark on many adventures in search of lost treasures, while Drake seeks to retrieve his family's legacy.",
+time:"Time:01:55:51",
 rate:"⭐⭐⭐⭐",
 link:"https://youtu.be/eHp3MbsCbMg"},
 //movie (4)
@@ -26,6 +29,7 @@ link:"https://youtu.be/eHp3MbsCbMg"},
 ,titleMovie:"Joker"
 ,type:"drama",
 description:"Little by little, pressure and circumstances combine to make a failed comedian go crazy and turn into a criminal and a maniacal killer.",
+time:"Time:02:01:50",
 rate:"⭐⭐⭐⭐",
 link:"https://youtu.be/zAGVQLHvwOY"},
 //movie (5)
@@ -33,6 +37,7 @@ link:"https://youtu.be/zAGVQLHvwOY"},
 ,titleMovie:"Minions: The Rise of Gru "
 ,type:"animation",
 description:"In the 1970s, a twelve-year-old puppy sets out to carry out his plan in which he hopes to become the most evil person on earth, and on his way encounters strange creatures.",
+time:"Time:01:27:36",
 rate:"⭐⭐⭐⭐",
 link:"https://youtu.be/HhIl_XJ-OGA"},
 //movie (6)
@@ -40,6 +45,7 @@ link:"https://youtu.be/HhIl_XJ-OGA"},
 ,titleMovie:"Prey"
 ,type:"drama",
 description:"The work deals with the story of the famous predator known as the Predator and its original story from 300 years, where Naru, a skilled warrior, fights to protect her tribe from the predator.",
+time:"Time:01:39:30",
 rate:"⭐⭐⭐",
 link:"https://youtu.be/3afFgl_bTW4"}]
 //select to div(main)
@@ -63,7 +69,7 @@ search.append(inputSearch)
 inputSearch.addClass("inputSearch")
 
 //creat input in search 
-const buttonSearch=$(`<button claas=buttonSearch><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+const buttonSearch=$(`<button claas=buttonSearch><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
 </svg></button>`)
 search.append(buttonSearch)
@@ -132,7 +138,9 @@ bar.append(sortBy)
 //console.log(e.target.value); 
  })
 //creat button Home in bar 
-const Home=$("<button>Home</button>")
+const Home=$(`<button> <svg  xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="svgHome" viewBox="0 0 16 16">
+<path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+</svg></button>`)
 bar.append(Home)
 Home.addClass("Home")
 //creat function Home
@@ -142,16 +150,23 @@ main.append(bar)
     funMovie()
 })
 ///creat button favorite in bar
-const Favorite=$("<button>Favorite</button>")
+const Favorite=$(`<button><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-bookmark-heart-fill" viewBox="0 0 16 16">
+<path d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.5zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
+</svg></button>`)
 bar.append(Favorite)
 Favorite.addClass("Favorite")
 //creat function favclick
 const favclick=Favorite.on("click",()=>{
     main.text("")
     main.append(bar)
-    const favArray= localStorage.getItem("Fav");
-     JSON.parse(favArray);
-     console.log(favArray);
+    const HomeFun=Home.on("click",()=>{
+        main.text("")
+    main.append(bar)
+        funMovie()
+    })
+    // const favArray= localStorage.getItem("Fav");
+    //  JSON.parse(favArray);
+    //  console.log(favArray);
 
     array.map((elem,i)=>{
          const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.description}</div></div>`)
@@ -160,11 +175,14 @@ const favclick=Favorite.on("click",()=>{
     })
 })
 //creat button login in bar 
-const Login=$("<button>Login</button>")
+const Login=$(`<button><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="svgLogin" viewBox="0 0 16 16">
+<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg></button>`)
 bar.append(Login)
 Login.addClass("Login")
 //creat dark mode in bar
-const darkMode=$(`<button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+const darkMode=$(`<button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
 <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
 </svg></button>`)
 bar.append(darkMode)
@@ -228,7 +246,7 @@ const funMovie=()=>{
        //click in the img
        listMovie.on("click",()=>{
         mainMovie.text("")
-        const listMovie=$(`<div><img  class="img1" src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.description}</div><div>${elem.rate}</div></div>`)
+        const listMovie=$(`<div><img  class="img1" src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.description}</div><div>${elem.time}</div><div>${elem.rate}</div></div>`)
         mainMovie.append(listMovie);
         listMovie.addClass("listMovie2") 
 mainMovie.addClass("mainMovie2")
@@ -244,7 +262,7 @@ mainMovie.addClass("mainMovie2")
             
         })
         //creat button Trailer
-    const Trailer=$(`<div><a href="${elem.link}">Trailer</a></div>`)
+    const Trailer=$(`<div><a href="${elem.link}" class:"link">Trailer</a></div>`)
     mainMovie.append(Trailer)
     Trailer.addClass("Trailer")
         //creat button fav
@@ -258,9 +276,9 @@ mainMovie.addClass("mainMovie2")
             //     localStorage.setItem("Fav", JSON.stringify(array));
 
             //    }else{
-                localStorage.setItem("Fav",JSON.stringify(array))
+                // localStorage.setItem("Fav",JSON.stringify(array))
             //    }
-            //console.log(array);
+            console.log(array);
         })
         
     })
