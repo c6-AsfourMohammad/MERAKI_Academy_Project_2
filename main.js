@@ -193,10 +193,33 @@ Login.on("click",()=>{
     reg1.on("click",()=>{
         main.text("")
         Login.text("")
-        const reg=$(`<div class="reg"><h1>Register</h1><input placeholder="User name"/><input placeholder="Password" type="Password"/><input placeholder="Password" type="Password"/><button>Register</button></div>`)
+        const reg=$(`<div class="reg"><h1>Register</h1></div>`)
+       const input1=$(`<input placeholder="User name"/>`)
+       reg.append(input1)
+       const input2=$(`<input placeholder="Password" type="Password"/>`)
+       reg.append(input2)
         main.append(bar)
         main.append(reg)
-        
+        const reg2=$(`<button>Register</button>`)
+        reg.append(reg2)
+        reg2.on("click",()=>{
+            let users=localStorage.getItem("users")
+            if(!users){
+                users=[]
+            }else{
+                users=JSON.parse(users)
+            }
+let userName=input1.val()
+let pass=input2.val()
+if(userName===undefined||userName===null||userName===""){
+    alert("fill all required fields");
+return 
+}
+if(pass===undefined||pass===null||pass===""){
+    alert("fill your password");
+return 
+}
+        })
 
     })
 })
