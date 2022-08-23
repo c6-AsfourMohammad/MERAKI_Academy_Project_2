@@ -369,3 +369,23 @@ font-family:cursive;
    color:black; 
    border: 2px solid black;
 }
+.hide {
+   display: none;
+   font-size: 15px;
+   font-family:cursive;
+ }
+ 
+ .inputLogin1:hover + .hide {
+   display: block;
+   color: red;
+ }
+ .hide1 {
+   display: none;
+   font-size: 15px;
+   font-family:cursive;
+ }
+ 
+ .inputLogin2:hover + .hide1 {
+   display: block;
+   color: red;
+ }

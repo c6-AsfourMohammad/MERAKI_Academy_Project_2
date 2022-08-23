@@ -190,10 +190,12 @@ Login.on("click",()=>{
     login2.append(h1login)
     h1login.addClass("h1login")
     main.append(login2)
-    const inputLogin1=$(`<input placeholder="User name"/>`)
+    const inputLogin1=$(`<input placeholder="User name"/>
+<div class="hide">Enter User name</div>`)
 login2.append(inputLogin1)
 inputLogin1.addClass("inputLogin1")
-const inputLogin2=$(`<input placeholder="Password" type="Password"/>`)
+
+const inputLogin2=$(`<input placeholder="Password" type="Password"/><div class="hide1">Enter Password</div>`)
 login2.append(inputLogin2)
 inputLogin2.addClass("inputLogin2")
     const reg1=$(`<button >Register</button>`)
@@ -262,7 +264,7 @@ return
 user={userName:userName,pass:pass};
 users.push(user)
 localStorage.setItem("users",JSON.stringify(users))
-alert("Done");
+alert("Registration success");
 reg.text("")
 Login.append(login2)
 funMovie()
