@@ -155,9 +155,12 @@ Favorite.addClass("Favorite")
 const favclick=Favorite.on("click",()=>{
     main.text("")
     main.append(bar)
+   
     const HomeFun=Home.on("click",()=>{
         main.text("")
+       
     main.append(bar)
+   
         funMovie()
         
     })
@@ -182,16 +185,23 @@ Login.addClass("Login")
 Login.on("click",()=>{
     main.text("")
     main.append(bar)
-    login2=$(`<div class="login1"><h1 class="h1login">Login</h1></div>`)
-    Login.append(login2)
-    const inputLogin1=$(` <input placeholder="User name"/>`)
+    login2=$(`<div class="login1"></div>`)
+    const h1login=$(`<h1 class="h1login">Login</h1>`)
+    login2.append(h1login)
+    h1login.addClass("h1login")
+    main.append(login2)
+    const inputLogin1=$(`<input placeholder="User name"/>`)
 login2.append(inputLogin1)
-const inputLogin2=$(` <input placeholder="Password" type="Password"/>`)
+inputLogin1.addClass("inputLogin1")
+const inputLogin2=$(`<input placeholder="Password" type="Password"/>`)
 login2.append(inputLogin2)
-    const reg1=$(`<button class="Register">Register</button>`)
+inputLogin2.addClass("inputLogin2")
+    const reg1=$(`<button >Register</button>`)
     login2.append(reg1)
+    reg1.addClass("reg1")
     const loginButton=$(`<button >Login</button>`)
     login2.append(loginButton)
+    loginButton.addClass("loginButton")
     loginButton.on("click",()=>{
     users=JSON.parse(localStorage.getItem("users"));
     if(inputLogin1.val()===undefined||inputLogin1.val()===null||inputLogin1.val()===""){
@@ -215,15 +225,23 @@ login2.append(inputLogin2)
         main.text("")
         login2.text("")
       
-        const reg=$(`<div class="reg"><h1>Register</h1></div>`)
+        const reg=$(`<div></div>`)
+        reg.addClass("reg")
+        const h1reg=$(`<h1>Register</h1>`)
+        reg.append(h1reg)
+        h1reg.addClass("h1reg")
        const input1=$(`<input placeholder="User name"/>`)
        reg.append(input1)
+       input1.addClass("input1")
        const input2=$(`<input placeholder="Password" type="Password"/>`)
        reg.append(input2)
+       input2.addClass("input2")
+
         main.append(bar)
         main.append(reg)
         const reg2=$(`<button>Register</button>`)
         reg.append(reg2)
+        reg2.addClass("reg2")
         reg2.on("click",()=>{
             let users=localStorage.getItem("users")
             if(!users){
@@ -247,7 +265,7 @@ localStorage.setItem("users",JSON.stringify(users))
 alert("Done");
 reg.text("")
 Login.append(login2)
-
+funMovie()
         })
 
     })
