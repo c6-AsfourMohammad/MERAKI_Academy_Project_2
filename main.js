@@ -209,7 +209,7 @@ const favclick=Favorite.on("click",()=>{
     main.append(bar)
    
         funMovie()
-        
+       
     })
     // const favArray= localStorage.getItem("Fav");
     //  JSON.parse(favArray);

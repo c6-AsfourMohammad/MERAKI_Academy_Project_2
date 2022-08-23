@@ -394,3 +394,14 @@ font-family:cursive;
    display: block;
    color: red;
  }
+ .footer {
+margin-top: 100px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:rgb(240, 210, 42);
+   color: black;
+   text-align: center;
+   font-family:cursive;
+}
+ 
