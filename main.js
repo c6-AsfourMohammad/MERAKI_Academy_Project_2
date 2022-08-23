@@ -15,7 +15,14 @@ type:"action",
 description:"After a career spanning more than thirty years to become one of the most qualified pilots in the US Air Force, Betty Mitchell takes a new step in his aviation career by experimenting with new aircraft.",
 time:"Time:02:10:08",
 rate:"⭐⭐⭐",
-link:"https://youtu.be/giXco2jaZ_4"},
+link:"https://youtu.be/giXco2jaZ_4"}, 
+{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY21Zb2Ntdm1UWXZFY21ibUVjd2FsbUVtSWw.jpg",
+titleMovie:"لص بغداد",
+description:"في جو من التشويق واﻹثارة تدور أحداث الفيلم، حول مغامرة كوميدية تقع عندما يهم كلا من (يوسف وخالد ونادية) البحث عن مقبرة اﻹسكندر اﻷكبر التي يبحث عنها العالم منذ قرون طويلة.",
+type:"comedy",
+time:"01:41:32",
+rate:"⭐⭐⭐",
+link:"https://youtu.be/aiZZ2g8BO88"},
 //movie (3)
 {imgMovie:"https://i.egycdn.com/pic/WmFwZndlY21tdmNtYm12dk5MUmNsYW1FbUlhbWpsbA.jpg"
 ,titleMovie:"Uncharted"
@@ -24,6 +31,14 @@ description:"The events revolve around a young boy, Nathan Drake, and his relati
 time:"Time:01:55:51",
 rate:"⭐⭐⭐⭐",
 link:"https://youtu.be/eHp3MbsCbMg"},
+
+{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY21UbW1URW1wcGFjdmNtVGJheG1tbVli.jpg",
+titleMovie:"عنتر ابن ابن ابن ابن شداد",
+type:"comedy",
+description:"في قالب من الكوميديا والسخرية، يدخل حفيد (عنتر العبسي) في صراع مرير مع (أسد الرجال)، ويحاول التغلب عليه بكل ما أوتى من قوة في سبيل الفوز بقلب أجمل فتاة في القبيلة، فهل سيكون على قدر المنافسة؟ وهل سينجح في الفوز بقلبها؟",
+time:"01:50:23",
+rate:"⭐⭐",
+link:"https://youtu.be/fr-YvGbfSv4"},
 //movie (4)
 {imgMovie:"https://i.egycdn.com/pic/WmFwZndlY21MTnZtYm1qbWptYWN4dmNtam1tbW13VG1tYg.jpg"
 ,titleMovie:"Joker"
@@ -47,7 +62,39 @@ link:"https://youtu.be/HhIl_XJ-OGA"},
 description:"The work deals with the story of the famous predator known as the Predator and its original story from 300 years, where Naru, a skilled warrior, fights to protect her tribe from the predator.",
 time:"Time:01:39:30",
 rate:"⭐⭐⭐",
-link:"https://youtu.be/3afFgl_bTW4"}]
+link:"https://youtu.be/3afFgl_bTW4"},
+//movie (7)
+
+{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212dmNtRXZOdnZjbUVFY2NOam1ZdnZjbXB2dmM.jpg",
+titleMovie:"DC League of Super-Pets",
+type:"animation",
+description:"While Superman is busy on his own holiday away from fighting crime, his pet dog must step in to save things and form an alliance with the help of a cat with the ability to fly.",
+time:"	01:45:23",
+rate:"⭐⭐⭐⭐",
+link:"https://youtu.be/1jkw2JPCl18"}
+//movie (8)
+,{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY212bWJ2Y21qbXBtbWFjd0x3UGxtaENqbW0.jpg",
+titleMovie:"Jurassic World Dominion",
+type:"action",
+description:"After the failure to control the world of dinosaurs, and the greed of scientists to exploit matters for the purposes of cloning and financial gain, the dinosaurs succeed in liberating the entire world in great danger.",
+time:"02:40:41",
+rate:"⭐⭐",
+link:"https://youtu.be/fb5ELWi-ekk"},
+//movie (9)
+{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY21tbWJtbXZOam1vUmN2Y2FtSWx3VEV2dGM.jpg",
+titleMovie:"Spider-Man: No Way Home",
+type:"action",
+description:"After Peter Parker is accused of killing Mastario and sowing chaos in the city, he turns to Doctor Strange in an attempt to erase what happened and restore the secrecy of his identity, during which Parker finds himself facing off against enemies from other worlds.",
+time:"02:28:10",
+rate:"⭐⭐⭐⭐⭐",
+link:"https://youtu.be/JfVOs4VSpmA"},
+{imgMovie:"https://i.egycdn.com/pic/WmFwZndlY21Udm1tbVlibXZ2UmNtSHRjdmNtam1ieG16.jpg",
+titleMovie:"الكويسين",
+type:"comedy",
+description:"مفتاح وشقيقته غزال ثنائي متخصص في النصب، يكتشف مفتاح وجود جوهرة ثمينة تدعى القرموط القرمزي في منزل عائلة الكويسين، فيقرر اختراق صفوف هذه العائلة من خلال انتحال شخصية ابنهم مظهر المفقود منذ سنوات طويلة، لكن هذه المهمة تواجه الكثير من الصعوبات رغم نجاحها في البداية.",
+time:"01:59:08",
+rate:"⭐⭐⭐",
+link:"https://youtu.be/k0-2JIJ1Rgg"}]
 //select to div(main)
 const main=$("#main");
 //creat div (bar) in top app 
@@ -331,7 +378,7 @@ const funMovie=()=>{
     
     //use map To view Movie in main
     movie.map((elem,i)=>{
-        const listMovie=$(`<div><img src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div></div>`)
+        const listMovie=$(`<div><img class="imgmovie" src="${elem.imgMovie}"/>${elem.titleMovie}<div>${elem.rate}</div></div>`)
         mainMovie.append(listMovie);
         listMovie.addClass("listMovie1") ;
        index++

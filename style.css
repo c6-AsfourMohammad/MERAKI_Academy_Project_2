@@ -26,6 +26,10 @@ font-family:cursive;
     position: sticky;
     border-radius: 20px;
 }
+.imgmovie{
+   height: 450px;
+   width: 300px;
+}
  .listMovie1{
  display: grid;  
   justify-content: center; 
@@ -297,7 +301,8 @@ height: 100px;
   .login1{
    display: grid;
    justify-content: center;
-   margin-top: 200px;
+   margin-top: 180px;
+   gap: 10px;
   }
   .h1login{
    color:black;
