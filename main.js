@@ -301,7 +301,7 @@ inputLogin2.addClass("inputLogin2")
 let userName=input1.val()
 let pass=input2.val()
 if(userName===undefined||userName===null||userName===""){
-    alert("fill all required fields");
+    alert("fill your User name");
 return 
 }
 if(pass===undefined||pass===null||pass===""){
@@ -424,6 +424,9 @@ mainMovie.addClass("mainMovie2")
        
     })
 }
+
+
+
  console.log(funMovie());
 
 
